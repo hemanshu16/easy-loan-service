@@ -1,0 +1,422 @@
+/*
+Theme Name: Banca
+Theme URI: https://wordpress-theme.spider-themes.net/banca/
+Author: Spider-themes
+Author URI: https://themeforest.net/user/spider-themes
+Description: Banca is a Business and Finance WordPress theme for Consulting websites or promoting your services, Bank websites, loan companies, corporate and business-related services
+Version: 1.1.2
+Requires at least: 5.0
+Tested up to: 5.8
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: banca
+*/
+
+/*---------------------------------------------------- */
+/*------------------- CSS Variable --------------------*/
+:root {
+    /*Color Variables*/
+    --primary-color: var(--accent_solid_color_opt, #0050b2); /*Theme Brand Color*/
+    --secondary-color: var(--secondary_color_opt, #171d24);
+    --body-color: var(--paragraph_color_opt, #4c5267); /*Theme Paragraph Color*/
+
+    /*font Variables*/
+    --poppins: "Poppins", sans-serif;
+    --roboto: "Roboto", sans-serif
+}
+
+/**=== Override Elementor Style ===**/
+body .elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 15px;
+}
+
+/***============ Admin Bar ================**/
+.admin-bar .header {
+    margin-top: 32px;
+}
+.admin-bar header .navbar_fixed {
+    top: 32px !important;
+}
+
+/***=========== Header ================***/
+.header .header-top {
+    padding: 18px 0;
+    background-color: #ffffff;
+}
+header .header-top .header-info-right ul li i,
+header .header-top .header-info-right ul li a,
+header .header-top .header-info-left {
+    color: #6a737c;
+}
+
+.header-menu.navbar_fixed .navbar .menu > .active > .nav-link {
+    color: var(--primary-color);
+}
+
+.header-menu .menu > .active.nav-item > .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/***========== Testimonials ===============**/
+.rating li {
+    display: inline-block;
+}
+
+.rating a .icon_star_alt {
+    color: #DEDEDE !important;
+}
+
+/***====== Cards =======**/
+.feature-area-2 .feature-img img {
+    width: auto;
+}
+
+/***====== Steps ========***/
+.how-it-work .apply-online .widget-img img {
+    max-width: initial;
+}
+
+/***========= Images Section ===========***/
+.banca_images_animation2 {
+    overflow: visible;
+}
+
+.track-f-progress .img-content .bg-img, .card-payment .img-content .bg-img,
+.internet-banking .img-content .bg-img,
+.banca_images_animation2 .hero-img img, .banca_images_animation3 .card-img img,
+.safe-deposit-area .card-img img, .blog_sidebar .recent_news_widget .media img {
+    max-width: inherit;
+}
+
+.banner-area-3 .position-relative .person-img {
+    max-width: initial;
+}
+
+/***=========== Counter ================***/
+.statistics-widget-2 .slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.footer_counter {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer_counter h1 {
+    font-size: 70px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.footer_counter h4 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+/***======== Error Page ==========***/
+.error_area .error_content_two .action_btn {
+    box-shadow: none;
+}
+
+/***============= Tabs ============***/
+.accolades-widget .accolades-content ul li + li {
+    margin-top: 16px;
+}
+.accolades-widget .accolades-content ul li p + p {
+    color: #f9d8ae;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    position: relative;
+}
+.accolades-widget .accolades-content ul li p + p::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    height: 1px;
+    width: 15px;
+    background-color: #f9d8ae;
+    left: -18px;
+}
+
+/***================ Logo ====================***/
+.header-menu .navbar-brand h3, .footer_logo h3 {
+    margin: 0;
+    color: #fff;
+}
+
+.navbar_fixed .navbar-brand h3 {
+    color: #201f1f;
+}
+
+/***================ Unit test =====================***/
+.post-details-widget .tag-widget a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+blockquote {
+    background-color: #f5f7fa;
+}
+
+.page_wrapper blockquote {
+    background-color: #ffffff;
+}
+
+/***================ Single Post =====================***/
+.post-details-widget .feature-list {
+    padding: 8px 0 30px 33px;
+}
+
+.author-media-widget {
+    border-radius: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/***=============== Blog ====================***/
+.blog-widget-1 img.attachment-full.size-full {
+    border-radius: 10px 10px 0 0;
+}
+
+.blog-widget-1 .blog-content {
+    padding: 15px;
+}
+
+.blog-widget-1 .blog-content .cats a,
+.blog-widget-1 .blog-content h6 a:hover {
+    color: var(--primary-color);
+}
+
+.blog-widget-1 .blog-content .cats {
+    font-weight: 400;
+    color: var(--body-color);
+    font-size: 15px;
+}
+.blog-widget-1 .blog-content .cats .separator {
+    margin: 0 6px;
+}
+
+.blog-widget-1 .blog-content h6 {
+    margin: 20px 0 14px 0;
+}
+
+.news-area .news-slider .blog-widget-1 {
+    padding: 10px;
+}
+.news-area .news-slider .blog-widget-1 {
+    margin: 25px 15px 50px 15px;
+}
+
+
+/*****===================== Job Pages ===============================***/
+.feature-job-tab .feature-job-list li:not(:last-child) {
+    margin-bottom: 21px;
+}
+.job-description-widget h6 {
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 25px 0 14px 0;
+    line-height: 30px;
+}
+.feature-job-tab .single-feature-job {
+    padding: 25px 30px;
+    border: 1px solid #efeff0;
+}
+.job-description-widget p {
+    line-height: 26px;
+}
+
+.job-description-widget ul li {
+    margin-top: 7px;
+    padding-left: 28px;
+    position: relative;
+    line-height: 26px;
+}
+
+.job-description-widget ul li::before {
+    content: "\5e";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    font-size: 16px;
+    color: var(--theme-text-color);
+    font-family: "ElegantIcons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.banca_job_search_form .search-box {
+    border: 1px solid var(--theme-border-color);
+    border-radius: 6px;
+}
+.banca_job_search_form .search-box .input-field {
+    position: relative;
+}
+.banca_job_search_form .search-box .input-field span {
+    position: absolute;
+    display: inline-block;
+    top: 6px;
+    left: 15px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #a8a8b2;
+}
+.banca_job_search_form .search-box .input-field .form-control {
+    padding-left: 49px;
+    border: none;
+    height: 45px;
+    color: #a8a8b2;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+}
+
+.feature-job-description p:first-of-type {
+    margin-top: 35px;
+}
+
+.feature-job-description p {
+    margin-top: 20px;
+}
+.job-post-widget .sidebar-header {
+    margin-bottom: 30px;
+}
+
+.left-sidebar-widget .sidebar-header {
+    margin-bottom: 45px;
+}
+
+.iti__flag {
+    background-image: url(assets/img/job/flags.png);
+}
+.job-application-modal .ajax-loader {
+    display: none;
+}
+.dropzone {
+    background-image: url(assets/img/job/icon_upload.svg);
+    background-repeat: no-repeat;
+    background-position: center 52px;
+}
+.job-application-modal .modal-dialog .dropzone {
+    padding-top: 80px;
+}
+.dropzone .wpcf7-form-control-wrap input.theme-btn {
+    padding: 5px;
+    line-height: 40px;
+}
+.job-application-modal .modal-dialog .modal-content .modal-body .theme-btn.wpcf7-submit {
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.job-description-widget p strong {
+    font-size: 18px;
+    color: #45454d;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.job-description-widget ul + p:last-of-type {
+    margin: 24px 0 35px 0;
+}
+
+/**==== Pagination ====**/
+.pagination-widget {
+    position: relative;
+}
+.pagination-widget .prev::after {
+    content: "\34";
+    font-family: 'ElegantIcons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.pagination-widget .next::after {
+    content: "\35";
+    font-family: 'ElegantIcons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.pagination-widget .page-numbers {
+    height: 32px;
+    width: 32px;
+    border: 1px solid rgba(0, 80, 178, 0.3);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--primary-color);
+    border-radius: 4px;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    line-height: 29px;
+    margin-right: 10px;
+}
+
+.pagination-widget .page-numbers.current {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.pagination-widget .page-numbers:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/****======= Action Button =========****/
+.header-menu .theme-btn {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.header-menu .theme-btn:hover {
+    color: var(--primary-color);
+    border-color: #fff;
+    background-color: #fff;
+}
+
+/***========= Mailchimp Form ===============***/
+.subscribe .input-group {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.email-alert-widget .subscribe {
+    max-width: 950px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.catagory-list-widget .catagory-list .catagory-item .catagory-link {
+    padding: 9px 20px 9px 52px;
+}
